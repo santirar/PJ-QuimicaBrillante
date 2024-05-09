@@ -1,0 +1,22 @@
+body {
+    margin: 25px;
+}
+
+/* Contenedores de parrafos */
+
+.container-1 {
+    background-color: red;
+    color: beige;
+    padding: 8px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+/* Headdings */
+
+h1 {
+    color: red;
+}
+h3 {
+    color: red;
+}
