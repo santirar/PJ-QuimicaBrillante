@@ -12,112 +12,253 @@
 }
 
 body {
-    background-color: #9acbf1;;
+    background: linear-gradient(to top, #2980b9, #6dd5fa, #ffffff 60%);
 }
 
 
 /* Variables */
 
 :root{
-    --background:
+    --background:#9acbf1;
     --primary:
     --secondary: 
-
-
+    --max-width: 1200px
 }
 
-/* Header */
+    /*------------------------------------------------------------------------------------------------------------------
+      ---------------------------------------------- HEADER ------------------------------------------------------------
+      ------------------------------------------------------------------------------------------------------------------*/
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff 70%);
     padding: 0 30px;
-    height: 8vh;
+    height: 75px;
     background-color: #36bbff;
-    border-style: inherit;
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #36bbff;
-    gap: 25px;
-    border-color: #09569e;
     
 }
 
-.logo {
-    height: 100%;
+.navbar {
+    max-width: var(--max-width);
 }
+
+.nav-list {
+    /* border: solid 1px red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+
 
 .nav-items {
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #09569e;
-    border: solid 2px #09569e;
-    border-radius: 20px;
     padding: 5px;
-    background-color: #9acbf1;
-
 }
 
 .nav-items:hover {
-    background-color: #dcf0ff;
+    color: #000000;
 }
 
-/* Main */
+.logo-nav {
+    height: 100px;
+}
+
+    /*------------------------------------------------------------------------------------------------------------------
+      ---------------------------------------------- MAIN --------------------------------------------------------------
+      ------------------------------------------------------------------------------------------------------------------*/
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+  /*--------------------------------------------------------------------------------------------------------------------
+    ------------------------------------------------ SECTION MAIN INFO -------------------------------------------------
+    --------------------------------------------------------------------------------------------------------------------*/
 
-/* Contenedores de parrafos */
-
-.titulo {
+#main-info {
+    max-width: var(--max-width);
+    padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 70px;
+    /* border: 1px solid red; */
+}
+    
+#main-info h2 {
+    /* background-color: red; */
+    text-align: center;
+    font-size: 25px;
+    color: #09569e;
+}
+       
+.logo-main {
+    
+    height: 500px;
+    /* border: 1px solid red; */
+}
+
+.caja-info {
+    display: flex;
+    max-width: var(--max-width);
+    justify-content: space-between;
+    text-align: center;
+    gap: 70px;
+    color: #262626;
+    margin-top: 80px;
+    font-size: 18px;
+    /* border: solid 1px red; */
+}
+
+.caja-info h3 {
+    font-size: 40px;
+}
+
+.info-titulo {
+    /* border: solid 1px red; */
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.info-texto {
+    font-size: 1.25rem;
+    color: #4e4e4e;
+    max-width: 600px;
+    padding: 8px;
     margin: 20px;
 }
 
-.caja-texto {
-    display: flex;
-    width: fit-content;
-    text-align: center;
-    background-color: #64b8fa;
+.boton-prod {
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: #262626;
-    padding: 20px;
-    margin: 20px 80px;
+    background-color: #2980B9;
     border-radius: 10px;
-    border: 2px solid #262626;
-    font-size: 18px;
+    color: #ffffff;
+    padding: 10px;
+    
 }
 
 .negrita {
     font-weight: 600;
 }
+
+    /*--------------------------------------------------------------------------------------------------------------------
+    ------------------------------------------------ SECTION SERVICIO DOMICILIO ------------------------------------------
+    --------------------------------------------------------------------------------------------------------------------*/
+
+#servicio-domicilio {
+    max-width: var(--max-width);
+    text-align: center;
+    margin-top: 150px;
+    /* border: 1px solid red; */
+}
+
+#servicio-domicilio h2 {
+    font-size: 25px;
+}
+
+.servicio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    flex-wrap: wrap;
+    gap: 30px;
+    /* border: 1px solid red; */
+    margin: 50px;
+}
+
+.servicio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    height: 225px;
+}
+
+.servicio-card h3 {
+    font-size: 18px;
+}
+
+.icono {
+    width: 60px;
+    border: solid 2px black;
+    border-radius: 100%;  
+}
+
+.caja-shadow {
+    box-shadow: 1px 12px 31px -2px rgba(0,0,0,0.56);
+}
+    /*------------------------------------------------------------------------------------------------------------------
+      ---------------------------------------------- SECTION PRODUCTOS -------------------------------------------------
+      ------------------------------------------------------------------------------------------------------------------*/
+
+#productos {
+    max-width: var(--max-width);
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 70px;
+    /* border: 1px solid red; */
+}
+
+#productos h2 {
+    color: #09569e;
+}
+
+.caja-prod {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    max-width: var(--max-width);
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.item-prod {
+    color: #262626;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    height: 50%;
+    width: 23%;
+    background: radial-gradient( #64b8fa 50%, #09569e 100%);
+    
+}
+
 /* Headdings */
 
 h1 {
     
     text-align: center;
-    color: #09569e;
-    font-size: 50px;
+    background: linear-gradient(to top,#09569e 30%, #262626);
+    color: transparent;
+    background-clip: text;
+    font-size: 70px;
 }
-h2 {
-    text-align: center;
-    font-size: 25px;
-    color: #09569e;
-}
+ 
+    
 h3 {
     
-    font-size: 25px;
+    font-size: 15px;
     padding: 2px;
     border-radius: 10px;
     
@@ -143,18 +284,6 @@ h4 {
     align-items: center;
 }
 
-.margen {
-    margin: 7px;
-}
 
-.box-shadow {
-    background-color: #64b8fa;
-    color: #262626;
-    padding: 8px;
-    margin: 20px;
-    border-radius: 10px;
-    border: 2px solid #262626;
-    box-shadow: 3px 3px 2px 2px rebeccapurple;
-}
 
 
