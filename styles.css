@@ -33,15 +33,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff 70%);
-    padding: 0 30px;
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff 100%);
+    padding: 0px 20px 0px 0px;
     height: 75px;
     background-color: #36bbff;
-    
-}
 
-.navbar {
-    max-width: var(--max-width);
+    
 }
 
 .nav-list {
@@ -52,29 +49,28 @@ header {
     gap: 25px;
 }
 
-
-
 .nav-items {
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
-    color: #09569e;
+    color: #262626;
     padding: 5px;
 }
 
 .nav-items:hover {
-    color: #000000;
+    color: #ffffff;
 }
 
 .logo-nav {
-    height: 100px;
+    height: 125px;
+    margin-top: 10px;
 }
 
     /*------------------------------------------------------------------------------------------------------------------
       ---------------------------------------------- MAIN --------------------------------------------------------------
       ------------------------------------------------------------------------------------------------------------------*/
 
-main {
+.main {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -93,16 +89,8 @@ main {
     gap: 70px;
     /* border: 1px solid red; */
 }
-    
-#main-info h2 {
-    /* background-color: red; */
-    text-align: center;
-    font-size: 25px;
-    color: #09569e;
-}
        
 .logo-main {
-    
     height: 500px;
     /* border: 1px solid red; */
 }
@@ -111,33 +99,34 @@ main {
     display: flex;
     max-width: var(--max-width);
     justify-content: space-between;
-    text-align: center;
     gap: 70px;
     color: #262626;
-    margin-top: 80px;
     font-size: 18px;
     /* border: solid 1px red; */
 }
 
-.caja-info h3 {
-    font-size: 40px;
+.caja-texto {
+    display: flex;
+    flex-direction: column;
 }
 
 .info-titulo {
     /* border: solid 1px red; */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    
+    padding-top: 100px;
+    font-size: 40px;
 }
 
 .info-texto {
+   
+    /* border: solid 1px red; */
     font-size: 1.25rem;
     color: #4e4e4e;
     max-width: 600px;
-    padding: 8px;
-    margin: 20px;
+    margin: 10px;
+    margin-bottom: 30px;
+    
 }
 
 .boton-prod {
@@ -148,7 +137,7 @@ main {
     border-radius: 10px;
     color: #ffffff;
     padding: 10px;
-    
+    margin: 10px;
 }
 
 .negrita {
@@ -168,6 +157,7 @@ main {
 
 #servicio-domicilio h2 {
     font-size: 25px;
+    margin-bottom: 80px;
 }
 
 .servicio-container {
@@ -185,11 +175,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(238, 238, 238);
     padding: 30px;
     border-radius: 8px;
     max-width: 400px;
     height: 225px;
+    transition: all 1s;
+    /* border: 1px solid red; */
 }
 
 .servicio-card h3 {
@@ -198,7 +190,7 @@ main {
 
 .icono {
     width: 60px;
-    border: solid 2px black;
+    border: solid 2px #4e4e4e;
     border-radius: 100%;  
 }
 
@@ -211,7 +203,7 @@ main {
 
 #productos {
     max-width: var(--max-width);
-    margin-top: 70px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,52 +213,91 @@ main {
 }
 
 #productos h2 {
-    color: #09569e;
+    color: #262626;
 }
 
 .caja-prod {
     /* border: 1px solid red; */
     display: flex;
     justify-content: center;
-    max-width: var(--max-width);
-    flex-wrap: wrap;
+    width: 90%;
+    flex-wrap:nowrap;
     gap: 40px;
 }
 
 .item-prod {
-    color: #262626;
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    padding: 40px;
+    color: #262626;
+    font-weight: 450;
+    padding: 5px;
     height: 50%;
-    width: 23%;
-    background: radial-gradient( #64b8fa 50%, #09569e 100%);
-    
-}
-
-/* Headdings */
-
-h1 {
-    
-    text-align: center;
-    background: linear-gradient(to top,#09569e 30%, #262626);
-    color: transparent;
-    background-clip: text;
-    font-size: 70px;
-}
- 
-    
-h3 {
-    
-    font-size: 15px;
-    padding: 2px;
+    width: 30%;
     border-radius: 10px;
-    
-    margin: 8px;
-    display: inline;
 }
-h4 {
-    font-size: 20px;
+
+.item-prod-limpieza {
+    background-image: url(./assets/limpieza.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.item-prod-piscina {
+    background-image: url(./assets/piscina.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.item-prod-bazar {
+    background-image: url(./assets/bazar.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.item-prod-jardin {
+    background-image: url(./assets/jardineria.jpg);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.item-prod-automotores {
+    background-image: url(./assets/automotores.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.item-prod-plagas {
+    background-image: url(./assets/plagas.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+.item-prod:hover {
+    background-color: #ffffff;
+}
+
+    /*------------------------------------------------------------------------------------------------------------------
+      ---------------------------------------------- SECTION FOOTER ----------------------------------------------------
+      ------------------------------------------------------------------------------------------------------------------*/
+
+#footer {
+    background-color: #262626;
+    color: aliceblue;
+    max-width: var(--max-width);
+    padding: 30px;
 }
 
 .botonWpp {
@@ -284,6 +315,46 @@ h4 {
     align-items: center;
 }
 
+    /*------------------------------------------------------------------------------------------------------------------
+      ---------------------------------------------- MEDIAQUERIES ------------------------------------------------------
+      ------------------------------------------------------------------------------------------------------------------*/
 
+      /* Notebooks y Tablets */
 
+@media (max-width: 992px) {
+    
+    .caja-info {
+        /* border: solid red 1px; */
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: right;
+       
+    }
+
+    .caja-texto {
+        flex-direction: column;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .info-texto {
+        max-width: 450px;
+        text-align: center;
+    }
+
+    .logo-main {
+        height: 400px
+    }
+
+    .servicio-card { 
+        height: 200px;
+        width: 300px;
+        font-size: smaller;
+    }
+
+    .servicio-card h3 {
+        font-size: medium;
+    }
+}
 
