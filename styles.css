@@ -13,6 +13,7 @@
 
 body {
     background: linear-gradient(to top, #2980b9, #6dd5fa, #ffffff 60%);
+    
 }
 
 
@@ -37,8 +38,6 @@ header {
     padding: 0px 20px 0px 0px;
     height: 75px;
     background-color: #36bbff;
-
-    
 }
 
 .nav-list {
@@ -66,6 +65,20 @@ header {
     margin-top: 10px;
 }
 
+.navbar {
+    display: flex;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.navbar i {
+    font-size: 37px;
+    display: none;
+}
+
+
     /*------------------------------------------------------------------------------------------------------------------
       ---------------------------------------------- MAIN --------------------------------------------------------------
       ------------------------------------------------------------------------------------------------------------------*/
@@ -81,12 +94,13 @@ header {
     --------------------------------------------------------------------------------------------------------------------*/
 
 #main-info {
-    max-width: var(--max-width);
+   
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 70px;
+
     /* border: 1px solid red; */
 }
        
@@ -98,6 +112,7 @@ header {
 .caja-info {
     display: flex;
     max-width: var(--max-width);
+    width: 90%;
     justify-content: space-between;
     gap: 70px;
     color: #262626;
@@ -140,6 +155,14 @@ header {
     margin: 10px;
 }
 
+.boton-prod:hover {
+    background-color: #ffffff;
+    color: #2980B9;
+    padding: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
 .negrita {
     font-weight: 600;
 }
@@ -166,7 +189,7 @@ header {
     align-items: center;
     max-width: var(--max-width);
     flex-wrap: wrap;
-    gap: 30px;
+    gap: 50px;
     /* border: 1px solid red; */
     margin: 50px;
 }
@@ -175,10 +198,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(238, 238, 238);
+    gap: 10px;
+    background-color: #eeeeee;
     padding: 30px;
     border-radius: 8px;
-    max-width: 400px;
+    max-width: 350px;
     height: 225px;
     transition: all 1s;
     /* border: 1px solid red; */
@@ -197,13 +221,53 @@ header {
 .caja-shadow {
     box-shadow: 1px 12px 31px -2px rgba(0,0,0,0.56);
 }
+
+.btn-container {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #262626;
+    border: 2px solid #262626;
+    border-radius: 10px;
+    padding: 20px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #eeeeee;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: all 0.5s;
+}
+
+.btn:hover::before {
+    transform: translateY(0);
+}
+
+
     /*------------------------------------------------------------------------------------------------------------------
       ---------------------------------------------- SECTION PRODUCTOS -------------------------------------------------
       ------------------------------------------------------------------------------------------------------------------*/
 
 #productos {
     max-width: var(--max-width);
-    margin-top: 150px;
+    margin-top: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -221,8 +285,8 @@ header {
     display: flex;
     justify-content: center;
     width: 90%;
-    flex-wrap:nowrap;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .item-prod {
@@ -315,6 +379,8 @@ header {
     align-items: center;
 }
 
+
+
     /*------------------------------------------------------------------------------------------------------------------
       ---------------------------------------------- MEDIAQUERIES ------------------------------------------------------
       ------------------------------------------------------------------------------------------------------------------*/
@@ -322,10 +388,36 @@ header {
       /* Notebooks y Tablets */
 
 @media (max-width: 992px) {
+
+    .nav-list {
+        position: absolute;
+        top: 70px;
+        left: 5%;
+        right: 5%;
+        flex-direction: column;
+        width: 90%;
+        background-color: #ffffff;
+        border: 2px solid #36bbff;
+        border-radius: 0px 0px 15px 15px;
+        border-top: 0;
+        gap: 25px;
+        padding: 35px 0;
+        display: none;
+    } 
     
+    #toggle-menu:checked ~ .nav-list {
+        display: flex;
+    }
+
+    .navbar i {
+        font-size: 25px;
+        display: flex;
+    }
+
     .caja-info {
         /* border: solid red 1px; */
         text-align: center;
+        width: 80%;
         flex-direction: column;
         align-items: center;
         justify-content: right;
@@ -356,5 +448,7 @@ header {
     .servicio-card h3 {
         font-size: medium;
     }
+
+@media (max-width: 500px)
 }
 

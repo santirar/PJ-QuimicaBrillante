@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Quimica Brillante</title>
 </head>
 
@@ -12,27 +13,26 @@
 
     <header>
         <img src="./assets/logonav.png" alt="logo" class="logo-nav">
-        
-        <nav>
-            <div class="navbar">
-                <ul class="nav-list">
+        <nav class="navbar">
+           
+            <label for="toggle-menu"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="toggle-menu">
+            
+            <ul class="nav-list">
                 
-                    <li><a href="index.html" class="nav-items">Inicio</a></li>
-                    <li><a href="#contacto" class="nav-items">Contactanos</a></li>
-                    <li><a href="#acercade" class="nav-items">¿Quienes somos?</a></li>
-                    <li><a href="#ubicacion" class="nav-items">¿Donde nos encontramos?</a></li>
+                <li><a href="index.html" class="nav-items">Inicio</a></li>
+                <li><a href="#contacto" class="nav-items">Contactanos</a></li>
+                <li><a href="#acercade" class="nav-items">¿Quienes somos?</a></li>
+                <li><a href="#ubicacion" class="nav-items">¿Donde nos encontramos?</a></li>
 
-                </ul>
-            </div>
+            </ul>
+
         </nav>
         
     </header>
 
     <main>
 
-        <!-- -------------------- -->
-        <!--  Section Main info   -->
-        <!-- -------------------- -->
         <section id="main-info">
                 
                 <div class="caja-info">
@@ -70,11 +70,14 @@
                         <p>Recorda pasarnos tu direccion para evitar demoras</p>
                     </div>
                 </div>
+                <div class="btn-container">
+                    <a href="" class="btn">¡Hace tu pedido!</a>
+                </div>
  
         </section>
 
         <section id="productos">
-            <h2>Conocé nuestros productos</h2> 
+            <h2>Nuestros productos</h2> 
             <div class="caja-prod">
                 <h3 class="item-prod info-texto item-prod-limpieza caja-shadow">Limpieza</h3>
                 <h3 class="item-prod info-texto item-prod-piscina caja-shadow">Piscina</h3>
